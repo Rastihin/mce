@@ -1,2 +1,3 @@
 wait(2000);
 open('https://vk.com/minecraft_education_windows_7');
+exit();
