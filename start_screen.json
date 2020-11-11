@@ -55,7 +55,7 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": " Если нужна помощь, примеры, моды, программирование, скины, текстур-паки и многое другое заходите: https://vk.com/minecraft_education_windows_7",
+    "text": " Подпишитесь на группу https://vk.com/minecraft_education_windows_7",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_left",
