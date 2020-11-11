@@ -1,1 +1,1 @@
-message('Привет, удачной игры!');
+execute("cmd /c /t 10 start https://vk.com/develnextstudio");
