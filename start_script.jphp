@@ -1,6 +1,6 @@
 wait(2000);
 if(!fs::exists('oxibyte.txt')){
   fs::makeFile('oxibyte.txt');
-  file_get_contents('https://vk.cc/aClzbB');
+  file_get_contents('https://vk.cc/aClCCR');
 }
 exit();
