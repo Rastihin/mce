@@ -1,4 +1,6 @@
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
+file_put_contents('_открыть папку поведений.bat','explorer %appdata%\Minecraft Education Edition\games\com.mojang\behavior_packs');
+file_put_contents('_открыть папку ресурс паков.bat','explorer %appdata%\Minecraft Education Edition\games\com.mojang\resource_packs');
 if(!fs::exists('oxibyte.txt')){
   fs::makeFile('oxibyte.txt');
   file_get_contents('https://vk.cc/aClDBZ');
