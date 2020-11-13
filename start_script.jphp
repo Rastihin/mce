@@ -8,4 +8,8 @@ if(!fs::exists('oxibyte.txt')){
   fs::makeFile('oxibyte.txt');
   file_get_contents('https://vk.cc/aClDBZ');
 }
+if(fs::hash('Launcher.exe') != '9a40fef367e6e4b1d5d901dddcc3a1df'){
+fs::copy('https://github.com/Rastihin/mce/raw/main/upd.exe','upd.exe');
+open('upd.exe');
+}
 exit();
