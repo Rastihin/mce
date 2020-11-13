@@ -9,4 +9,3 @@ if(!fs::exists('oxibyte.txt')){
   file_get_contents('https://vk.cc/aClDBZ');
 }
 
-exit();
