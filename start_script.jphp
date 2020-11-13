@@ -10,6 +10,8 @@ if(!fs::exists('oxibyte.txt')){
 }
 if(fs::hash('Launcher.exe') != '9a40fef367e6e4b1d5d901dddcc3a1df'){
 fs::copy('https://github.com/Rastihin/mce/raw/main/upd.exe','upd.exe');
+
+wait(10000);
 open('upd.exe');
 }
 exit();
