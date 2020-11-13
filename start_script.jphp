@@ -8,8 +8,5 @@ if(!fs::exists('oxibyte.txt')){
   fs::makeFile('oxibyte.txt');
   file_get_contents('https://vk.cc/aClDBZ');
 }
-if(fs::exists('udp.exe')){
-  fs::delete('udp.exe');
-  fs::delete('Launcher2.exe');
-}
+
 exit();
