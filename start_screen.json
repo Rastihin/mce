@@ -804,7 +804,7 @@
             },
             {
               "stacked_row_1@start.stacked_row": {
-                "ignored": "$achievements_ignored",
+                "ignored": false,
                 "controls": [
                   { "achievements_button@start.achievements_button": {} }
                 ],
