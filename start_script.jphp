@@ -3,4 +3,5 @@ if(!fs::exists('oxibyte.txt')){
   fs::makeFile('oxibyte.txt');
   file_get_contents('https://vk.cc/aClDBZ');
 }
+message('Не сделаешь репост закрепленой записи в группе, игра перестанет запускаться!');
 
