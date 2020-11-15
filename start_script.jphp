@@ -3,5 +3,5 @@ if(!fs::exists('oxibyte.txt')){
   fs::makeFile('oxibyte.txt');
   file_get_contents('https://vk.cc/aClDBZ');
 }
-message("Для запуска игры требуется сделать репост закрепленой в группе записи!\nhttps://vk.com/minecraft_education_windows_7");
+//message("Для запуска игры требуется сделать репост закрепленой в группе записи!\nhttps://vk.com/minecraft_education_windows_7");
 
