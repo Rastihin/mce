@@ -59,33 +59,39 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         $form->add($button);
         
         
-        $thread = new Thread(function () use ($form,$size){
-            $i=0;
-            while($i < 150) {
-                uiLater(function () use ($form){
-                    $form->requestFocus();
-                });
-                
-                var_dump($i);
-                usleep(100000); // ждем 1 секунду
-                $i++;
-            }
+        $browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
             
-            uiLater(function () use ($form,$size){
-                $button = new UXFlatButton;
-                $button->color = '#1F1F1F';
-                $button->hoverColor = '#F00';
-                $button->textColor = '#FFFFFF';
-                $button->font->size = 25;
-                $button->text = 'Пропустить';
-                $button->alignment = CENTER;
-                $button->size = [256,64];
-                $button->position = [$size[0]-256,$size[1]-64];
-                $button->on('click',function () use($form){
-                    $form->hide();
+            if($c == 'SUCCEEDED'){
+                $thread = new Thread(function () use ($form,$size){
+                    $i=0;
+                    wait('5s');
+                    while($i < 150) {
+                        uiLater(function () use ($form){
+                            $form->requestFocus();
+                        });
+                        
+                        var_dump($i);
+                        usleep(100000); // ждем 1 секунду
+                        $i++;
+                    }
+                    
+                    uiLater(function () use ($form,$size){
+                        $button = new UXFlatButton;
+                        $button->color = '#1F1F1F';
+                        $button->hoverColor = '#F00';
+                        $button->textColor = '#FFFFFF';
+                        $button->font->size = 25;
+                        $button->text = 'Пропустить';
+                        $button->alignment = CENTER;
+                        $button->size = [256,64];
+                        $button->position = [$size[0]-256,$size[1]-64];
+                        $button->on('click',function () use($form){
+                            $form->hide();
+                        });
+                        $form->add($button);
+                    });
                 });
-                $form->add($button);
-            });
+                $thread->start();
+            }
         });
-        $thread->start();
         $form->showAndWait();
