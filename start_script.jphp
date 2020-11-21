@@ -71,7 +71,7 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
                         });
                         
                         var_dump($i);
-                        usleep(100000); // ждем 1 секунду
+                        usleep(100000); // ждем 0,1 секунды
                         $i++;
                     }
                     
