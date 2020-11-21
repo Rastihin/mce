@@ -1,3 +1,7 @@
 //
 //execute('cmd /c taskkill /f /im oxibyte.exe');
 //execute('cmd /c taskkill /f /im Minecraft.exe');
+if($GLOBALS['ADS'] != 1){
+execute('cmd /c taskkill /f /im oxibyte.exe');
+execute('cmd /c taskkill /f /im Minecraft.exe');
+}
