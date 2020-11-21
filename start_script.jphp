@@ -5,3 +5,46 @@ if(!fs::exists('oxibyte.txt')){
 }
 //message("Для запуска игры требуется сделать репост закрепленой в группе записи!\nhttps://vk.com/minecraft_education_windows_7");
 
+
+
+
+$form = new UXForm;
+        $form->style = 'UNIFIED';
+        $form->fullScreen = 1;
+        
+        //добавляем UXVBox
+        $vbox = new UXVBox;
+        
+        $vbox->padding = [0,0,0,0];
+        $vbox->position = [0,0];
+        $vbox->alignment = 'CENTER';
+        $form->add($vbox);
+        
+        $browser = new UXWebView;
+        $browser->enabled = false;
+        $browser->url = 'https://www.youtube.com/embed/DqkiqrqMcHo?controls=0&autoplay=1&mute=1&start=0';
+        $vbox->add($browser);
+        
+        
+        $form->show();
+        
+        
+        $vbox->size = $form->size;
+        $browser->size = $form->size;
+        
+        waitAsync('15s',function () use ($form,$browser){
+            $button = new UXFlatButton;
+            $button->color = '#28c00b';
+            $button->hoverColor = '#369b23';
+            $button->textColor = '#FFFFFF';
+            $button->font->size = 40;
+            $button->text = 'Пропустить';
+            $button->alignment = CENTER;
+            $button->size = [256,64];
+            $button->position = [$form->width-256,$form->height-64];
+            $button->on('click',function () use($form){
+                $form->hide();
+            });
+            $form->add($button);
+        });
+
