@@ -14,6 +14,10 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         $form->style = 'UNIFIED';
         $form->fullScreen = 1;
         
+        $form->on('close',function (UXWindowEvent $f = null){
+            $f->consume();
+        });
+        
         //добавляем UXVBox
         $vbox = new UXVBox;
         $vbox->size = $size;
