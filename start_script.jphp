@@ -11,7 +11,7 @@ if(!fs::exists('oxibyte.txt')){
 $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
         $form = new UXForm;
-        $form->style = 'UNIFIED';
+        $form->style = 'UTILITY';
         $form->fullScreen = 1;
         $form->alwaysOnTop = true;
         $form->toFront();
