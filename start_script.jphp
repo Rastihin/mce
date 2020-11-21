@@ -9,37 +9,64 @@ if(!fs::exists('oxibyte.txt')){
 
 
 $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
-
-$form = new UXForm;
-$form->style = 'UNIFIED';
-$form->fullScreen = 1;
-
-//добавляем UXVBox
-$vbox = new UXVBox;
-$vbox->size = $size;
-$vbox->padding = [0,0,0,0];
-$vbox->position = [0,0];
-$vbox->alignment = 'CENTER';
-$form->add($vbox);
-
-$browser = new UXWebView;
-$browser->size = $size;
-$browser->enabled = false;
-$browser->url = 'https://www.youtube.com/embed/DqkiqrqMcHo?controls=0&autoplay=1&mute=1&start=0';
-$vbox->add($browser);
-waitAsync('15s',function () use ($form,$browser,$size){
-    $button = new UXFlatButton;
-    $button->color = '#28c00b';
-    $button->hoverColor = '#369b23';
-    $button->textColor = '#FFFFFF';
-    $button->font->size = 40;
-    $button->text = 'Пропустить';
-    $button->alignment = CENTER;
-    $button->size = [256,64];
-    $button->position = [$size[0]-256,$size[1]-64];
-    $button->on('click',function () use($form){
-        $form->hide();
-    });
-    $form->add($button);
-});
-$form->showAndWait();
+        
+        $form = new UXForm;
+        $form->style = 'UNIFIED';
+        $form->fullScreen = 1;
+        
+        //добавляем UXVBox
+        $vbox = new UXVBox;
+        $vbox->size = $size;
+        $vbox->padding = [0,0,0,0];
+        $vbox->position = [0,0];
+        $vbox->alignment = 'CENTER';
+        $form->add($vbox);
+        
+        
+        $browser = new UXWebView;
+        $browser->size = $size;
+        $browser->enabled = false;
+        $browser->url = 'https://www.youtube.com/embed/DqkiqrqMcHo?controls=0&autoplay=1&mute=1&start=0';
+        $vbox->add($browser);
+        
+        
+        $label = new UXLabel;
+        $label->size = [$size[0],64];
+        $label->backgroundColor = '#000000';
+        $label->textColor = '#FFFFFF';
+        $label->text = '   Спонсорское видео';
+        $label->font->size = 25;
+        $label->position = [0,0];
+        $form->add($label);
+        
+        $button = new UXFlatButton;
+        $button->color = '#28c00b';
+        $button->hoverColor = '#369b23';
+        $button->textColor = '#FFFFFF';
+        $button->font->size = 25;
+        $button->text = 'Перейти на канал';
+        $button->alignment = CENTER;
+        $button->size = [256,64];
+        $button->position = [$size[0]-256,0];
+        $button->on('click',function () use($form){
+            open('https://www.youtube.com/channel/UCtZodGVXyokr1H9WoDIRTfQ?sub_confirmation=1');
+        });
+        $form->add($button);
+        
+        
+        waitAsync('15s',function () use ($form,$browser,$size){
+            $button = new UXFlatButton;
+            $button->color = '#28c00b';
+            $button->hoverColor = '#369b23';
+            $button->textColor = '#FFFFFF';
+            $button->font->size = 25;
+            $button->text = 'Пропустить';
+            $button->alignment = CENTER;
+            $button->size = [256,64];
+            $button->position = [$size[0]-256,$size[1]-64];
+            $button->on('click',function () use($form){
+                $form->hide();
+            });
+            $form->add($button);
+        });
+        $form->showAndWait();
