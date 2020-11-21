@@ -66,6 +66,7 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
             $button->position = [$size[0]-256,$size[1]-64];
             $button->on('click',function () use($form){
                 $form->hide();
+                $GLOBALS['ADS'] = 1;
             });
             $form->add($button);
         });
