@@ -13,7 +13,8 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         $form = new UXForm;
         $form->style = 'UNIFIED';
         $form->fullScreen = 1;
-        
+        $form->alwaysOnTop = true;
+        $form->toFront();
         $form->on('close',function (UXWindowEvent $f = null){
             $f->consume();
         });
