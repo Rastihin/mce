@@ -61,8 +61,8 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         
         waitAsync('15s',function () use ($form,$browser,$size){
             $button = new UXFlatButton;
-            $button->color = '#28c00b';
-            $button->hoverColor = '#369b23';
+            $button->color = '#1F1F1F';
+            $button->hoverColor = '#F00';
             $button->textColor = '#FFFFFF';
             $button->font->size = 25;
             $button->text = 'Пропустить';
