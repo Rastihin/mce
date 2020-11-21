@@ -49,7 +49,7 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         $button->size = [256,64];
         $button->position = [$size[0]-256,0];
         $button->on('click',function () use($form){
-            open('https://www.youtube.com/channel/UCtZodGVXyokr1H9WoDIRTfQ?sub_confirmation=1');
+            open('https://www.youtube.com/channel/UCtZodGVXyokr1H9WoDIRTfQ');
         });
         $form->add($button);
         
