@@ -31,7 +31,7 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         $browser = new UXWebView;
         $browser->size = $size;
         $browser->enabled = false;
-        $browser->url = 'https://www.youtube.com/embed/9PN7nbOQHPY?controls=0&autoplay=1&mute=0&start=0';
+        $browser->url = 'https://www.youtube.com/embed/9PN7nbOQHPY?controls=0&autoplay=1&mute=1&start=0';
         $vbox->add($browser);
         
         
