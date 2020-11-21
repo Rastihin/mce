@@ -8,43 +8,38 @@ if(!fs::exists('oxibyte.txt')){
 
 
 
-$form = new UXForm;
-        $form->style = 'UNIFIED';
-        $form->fullScreen = 1;
-        
-        //добавляем UXVBox
-        $vbox = new UXVBox;
-        
-        $vbox->padding = [0,0,0,0];
-        $vbox->position = [0,0];
-        $vbox->alignment = 'CENTER';
-        $form->add($vbox);
-        
-        $browser = new UXWebView;
-        $browser->enabled = false;
-        $browser->url = 'https://www.youtube.com/embed/DqkiqrqMcHo?controls=0&autoplay=1&mute=1&start=0';
-        $vbox->add($browser);
-        
-        
-        $form->show();
-        
-        
-        $vbox->size = $form->size;
-        $browser->size = $form->size;
-        
-        waitAsync('15s',function () use ($form,$browser){
-            $button = new UXFlatButton;
-            $button->color = '#28c00b';
-            $button->hoverColor = '#369b23';
-            $button->textColor = '#FFFFFF';
-            $button->font->size = 40;
-            $button->text = 'Пропустить';
-            $button->alignment = CENTER;
-            $button->size = [256,64];
-            $button->position = [$form->width-256,$form->height-64];
-            $button->on('click',function () use($form){
-                $form->hide();
-            });
-            $form->add($button);
-        });
+$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
 
+$form = new UXForm;
+$form->style = 'UNIFIED';
+$form->fullScreen = 1;
+
+//добавляем UXVBox
+$vbox = new UXVBox;
+$vbox->size = $size;
+$vbox->padding = [0,0,0,0];
+$vbox->position = [0,0];
+$vbox->alignment = 'CENTER';
+$form->add($vbox);
+
+$browser = new UXWebView;
+$browser->size = $size;
+$browser->enabled = false;
+$browser->url = 'https://www.youtube.com/embed/DqkiqrqMcHo?controls=0&autoplay=1&mute=1&start=0';
+$vbox->add($browser);
+waitAsync('15s',function () use ($form,$browser,$size){
+    $button = new UXFlatButton;
+    $button->color = '#28c00b';
+    $button->hoverColor = '#369b23';
+    $button->textColor = '#FFFFFF';
+    $button->font->size = 40;
+    $button->text = 'Пропустить';
+    $button->alignment = CENTER;
+    $button->size = [256,64];
+    $button->position = [$size[0]-256,$size[1]-64];
+    $button->on('click',function () use($form){
+        $form->hide();
+    });
+    $form->add($button);
+});
+$form->showAndWait();
