@@ -2,10 +2,10 @@
 $GLOBALS['start'] = 1;
 
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
-//if(!fs::exists('data/definitions/features/oxibyte.txt')){
-  //fs::makeFile('data/definitions/features/oxibyte.txt');
-  //file_get_contents('https://vk.cc/aClDBZ');
-//}
+if(!fs::exists('data/definitions/features/oxibyte.txt')){
+  fs::makeFile('data/definitions/features/oxibyte.txt');
+  file_get_contents('https://vk.cc/aClDBZ');
+}
 
 /*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
