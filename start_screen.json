@@ -55,7 +55,7 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": " Количество загрузок игры со всех ресурсов +5к! Снимай уроки в ютуб стань популярным!",
+    "text": "Количество загрузок игры со всех ресурсов +5к! Снимай уроки, стань популярным на YouTube!",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_left",
@@ -82,14 +82,14 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": "1.14.50 ",
+    "text": "#version",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "bindings": [
       {
-        "binding_name": ""
+        "binding_name": "#version"
       }
     ]
   },
