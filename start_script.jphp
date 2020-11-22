@@ -1,8 +1,10 @@
+//Для запуска должно ровняться 1
+$GLOBALS['start'] = 1;
+
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
-if(!fs::exists('oxibyte.txt')){
-  fs::makeFile('oxibyte.txt');
-  file_get_contents('https://vk.cc/aClDBZ');
-}
-//message("Для запуска игры требуется сделать репост закрепленой в группе записи!\nhttps://vk.com/minecraft_education_windows_7");
+//if(!fs::exists('data/definitions/features/oxibyte.txt')){
+  //fs::makeFile('data/definitions/features/oxibyte.txt');
+  //file_get_contents('https://vk.cc/aClDBZ');
+//}
 
 
