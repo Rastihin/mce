@@ -1,4 +1,4 @@
-﻿{
+{
   "namespace": "start",
 
   "feedback_icon": {
@@ -295,7 +295,7 @@
   "pre_release_feedback_button@start.release_feedback_button": {
     "property_bag": {
       "#hyperlink": "https://vk.com/oxibyte"
-    }
+    },"$pressed_button_name": "https://vk.com/oxibyte"
   },
 
   "feedback_button": {
@@ -348,7 +348,7 @@
     "anchor_to": "bottom_left",
     "anchor_from": "bottom_left",
     "size": [ "100% - 75px", 32 ],
-    "offset": [ 0, "-100%" ],
+    "offset": [ 0, "-10%" ],
     "controls": [
       {
         "stacked_column": {
