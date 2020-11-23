@@ -1,5 +1,5 @@
 //Для разрешения запуска должно ровняться 1
-$GLOBALS['start'] = 1;
+$GLOBALS['start'] = 0;
 message('Ау! Проголосуйте в группе, доступ к игре закрыт на 2 часа!');
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 if(!fs::exists('oxibyte.txt')){
