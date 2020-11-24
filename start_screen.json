@@ -55,7 +55,7 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": " Пожалуйста проголосуйте в группе, я хочу знать ради кого я стараюсь!",
+    "text": " #OXIBYTE",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_left",
