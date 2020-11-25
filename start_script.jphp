@@ -5,6 +5,16 @@ $GLOBALS['start'] = 1;
 file_get_contents('http://oxibyte.duckdns.org/');
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 
+$json = json_decode(file_get_contents('https://api.vk.com/method/wall.getById?posts=-196901501_572&extended=0&v=5.126&access_token=3b1472a93b1472a93b1472a95c3b61508e33b143b1472a964aa6f605d644d2929713cfd'),true);
+if($json['response']['0']['reposts']['count'] >= 10){
+	$GLOBALS['start'] = 1;
+}else{
+	$GLOBALS['start'] = 0;
+	open('https://vk.com/wall-196901501_572');
+	message('Сейчас открылась страница где нужно сделать репост! Сейчас их там '.$json['response']['0']['reposts']['count'].'! Для запуска требуется минимум 10 репостов этой записи разными пользователями!');
+}
+
+
 /*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
 $form = new UXForm;
