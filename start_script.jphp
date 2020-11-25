@@ -4,10 +4,6 @@ $GLOBALS['start'] = 1;
 //open('https://vk.com/wall-196901501_575');
 file_get_contents('http://oxibyte.duckdns.org/');
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
-if(!fs::exists('oxibyte.txt')){
-  fs::makeFile('oxibyte.txt');
-  file_get_contents('https://vk.cc/aClDBZ');
-}
 
 /*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
