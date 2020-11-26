@@ -2,8 +2,9 @@
 //execute('cmd /c taskkill /f /im oxibyte.exe');
 //execute('cmd /c taskkill /f /im Minecraft.exe');
 if($GLOBALS['start'] != 1){
-execute('cmd /c taskkill /f /im oxibyte.exe');
+execute('cmd /c taskkill /f /im Minecraft.exe');
 execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
+execute('cmd /c taskkill /f /im oxibyte.exe');
 }
 //open('https://vk.com/wall-196901501_577');
 exit();
