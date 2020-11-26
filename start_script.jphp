@@ -6,7 +6,7 @@ file_get_contents('http://oxibyte.duckdns.org/');
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 
 if(fs::exists('Minecraft.Windows.exe') == false){
-	message('Вам нужно обновить игру! Не забудь поделиться с друзьями! Если они у вас есть))');
+	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
 	open('https://vk.com/minecraft_education_windows_7');
 	$GLOBALS['start'] = 0;
 }
