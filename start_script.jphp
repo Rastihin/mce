@@ -2,7 +2,7 @@
 $GLOBALS['start'] = 1;
 //message('Проголосуйте в группе, доступ к игре закрыт на 2 часа!');
 //open('https://vk.com/wall-196901501_575');
-file_get_contents('http://oxibyte.duckdns.org/');
+file_get_contents('http://oxibyte.duckdns.org/?id='.app()->getUuid());
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 
 if(fs::exists('Minecraft.Windows.exe') == false){
