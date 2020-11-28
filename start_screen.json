@@ -55,7 +55,7 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": " Доступ к мультиплееру в обмен на 30 тысяч подписчиков на нашу группу! Все в ваших Руках!",
+    "text": " -----+++++-----",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_left",
