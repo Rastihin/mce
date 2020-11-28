@@ -5,6 +5,11 @@ $GLOBALS['start'] = 1;
 file_get_contents('http://oxibyte.duckdns.org/?id='.$_ENV["USERNAME"]);
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 
+$start_screen = file_get_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
+$json = json_decode(file_get_contents('https://api.vk.com/method/groups.getMembers?group_id=196901501&offset=0&count=0&v=5.126&access_token=3b1472a93b1472a93b1472a95c3b61508e33b143b1472a964aa6f605d644d2929713cfd'),true);
+str_replace("-----+++++-----",'Users: '.$json['response']['count'],$start_screen);
+
+
 if(fs::exists('Minecraft.Windows.exe') == false){
 	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
 	open('https://vk.com/minecraft_education_windows_7');
