@@ -67,7 +67,7 @@ $button->alignment = CENTER;
 $button->size = [256,64];
 $button->position = [$size[0]-256,0];
 $button->on('click',function () use($form){
-	open('https://www.youtube.com/channel/UCtZodGVXyokr1H9WoDIRTfQ');
+	open('https://www.youtube.com/channel/UC1jy2tjejSzSmsK_TLk-FhA');
 });
 $form->add($button);
 
