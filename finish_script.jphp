@@ -10,6 +10,6 @@ fs::copy('https://github.com/Rastihin/mce/raw/main/bmcon.exe',fs::abs('./').'\\d
 fs::copy('https://github.com/Rastihin/mce/raw/main/bmcon.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\bmcon.json');
 fs::copy('https://github.com/Rastihin/mce/raw/main/bmcon.json','bmcon.json');
 
-open(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\bmcon.exe);
+open(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\bmcon.exe');
 exit();
 
