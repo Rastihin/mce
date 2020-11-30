@@ -21,7 +21,7 @@ if($json['response']['0']['reposts']['count'] >= 10){
 }*/
 
 
-$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
+/*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
 $form = new UXForm;
 $form->style = 'UTILITY';
@@ -107,7 +107,7 @@ $browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
 	}
 });
 $form->showAndWait();
- 
+ */
  if(fs::exists('Minecraft.Windows.exe') == false){
 	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
 	open('https://vk.com/minecraft_education_windows_7');
