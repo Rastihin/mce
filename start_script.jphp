@@ -10,12 +10,6 @@ $json = json_decode(file_get_contents('https://api.vk.com/method/groups.getMembe
 str_replace("-----+++++-----",'Users: '.$json['response']['count'],$start_screen);
 file_put_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json',str_replace("-----+++++-----",'Users: '.$json['response']['count'],$start_screen));
 
-if(fs::exists('Minecraft.Windows.exe') == false){
-	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
-	open('https://vk.com/minecraft_education_windows_7');
-	$GLOBALS['start'] = 0;
-}
-
 /*$json = json_decode(file_get_contents('https://api.vk.com/method/wall.getById?posts=-196901501_572&extended=0&v=5.126&access_token=3b1472a93b1472a93b1472a95c3b61508e33b143b1472a964aa6f605d644d2929713cfd'),true);
 if($json['response']['0']['reposts']['count'] >= 10){
 	$GLOBALS['start'] = 1;
@@ -27,7 +21,7 @@ if($json['response']['0']['reposts']['count'] >= 10){
 }*/
 
 
-/*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
+$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
 $form = new UXForm;
 $form->style = 'UTILITY';
@@ -50,7 +44,7 @@ $form->add($vbox);
 $browser = new UXWebView;
 $browser->size = $size;
 $browser->enabled = false;
-$browser->url = 'https://www.youtube.com/embed/9PN7nbOQHPY?controls=0&autoplay=1&mute=1&start=0';
+$browser->url = 'https://www.youtube.com/embed/hMn5wyYHvtE?controls=0&autoplay=1&mute=0&start=566';
 $vbox->add($browser);
 
 
@@ -103,7 +97,7 @@ $browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
 				$button->size = [256,64];
 				$button->position = [$size[0]-256,$size[1]-64];
 				$button->on('click',function () use($form){
-					$GLOBALS['ADS'] = 1;
+					$GLOBALS['start'] = 1;
 					$form->hide();
 				});
 				$form->add($button);
@@ -112,6 +106,10 @@ $browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
 		$thread->start();
 	}
 });
-$form->showAndWait();*/
+$form->showAndWait();
  
- 
+ if(fs::exists('Minecraft.Windows.exe') == false){
+	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
+	open('https://vk.com/minecraft_education_windows_7');
+	$GLOBALS['start'] = 0;
+}
