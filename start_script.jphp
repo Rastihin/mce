@@ -52,7 +52,7 @@ $label = new UXLabel;
 $label->size = [$size[0],64];
 $label->backgroundColor = '#000000';
 $label->textColor = '#FFFFFF';
-$label->text = '   Спонсорское видео';
+$label->text = '   Спонсорское видео (подождите что-бы пропустить...)';
 $label->font->size = 25;
 $label->position = [0,0];
 $form->add($label);
