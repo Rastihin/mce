@@ -21,7 +21,7 @@ if($json['response']['0']['reposts']['count'] >= 10){
 }*/
 
 
-/*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
+$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
 $form = new UXForm;
 $form->style = 'UTILITY';
@@ -44,7 +44,7 @@ $form->add($vbox);
 $browser = new UXWebView;
 $browser->size = $size;
 $browser->enabled = false;
-$browser->url = 'https://www.youtube.com/embed/hMn5wyYHvtE?controls=0&autoplay=1&mute=0&start=566';
+$browser->url = 'https://www.youtube.com/embed/Jizk5357Xuk?controls=0&autoplay=1&mute=0&start=0';
 $vbox->add($browser);
 
 
@@ -52,7 +52,7 @@ $label = new UXLabel;
 $label->size = [$size[0],64];
 $label->backgroundColor = '#000000';
 $label->textColor = '#FFFFFF';
-$label->text = '   Спонсорское видео (подождите что-бы пропустить...)';
+$label->text = '   Установка модов в игру (подождите что-бы пропустить)';
 $label->font->size = 25;
 $label->position = [0,0];
 $form->add($label);
@@ -67,7 +67,7 @@ $button->alignment = CENTER;
 $button->size = [256,64];
 $button->position = [$size[0]-256,0];
 $button->on('click',function () use($form){
-	open('https://www.youtube.com/channel/UC1jy2tjejSzSmsK_TLk-FhA');
+	open('https://www.youtube.com/channel/UCtZodGVXyokr1H9WoDIRTfQ');
 });
 $form->add($button);
 
@@ -107,7 +107,7 @@ $browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
 	}
 });
 $form->showAndWait();
- */
+ 
  if(fs::exists('Minecraft.Windows.exe') == false){
 	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
 	open('https://vk.com/minecraft_education_windows_7');
