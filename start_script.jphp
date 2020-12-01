@@ -2,7 +2,7 @@
 $GLOBALS['start'] = 1;
 //message('Проголосуйте в группе, доступ к игре закрыт на 2 часа!');
 //open('https://vk.com/wall-196901501_575');
-$GLOBALS['c'] = 1;
+$GLOBALS['c'] = 1; 
 $code = execute('cmd /c getmac /NH',true);
 $code->getInput()->eachLine(function ($line){
 	if($line != null && $GLOBALS['c'] == 1){
