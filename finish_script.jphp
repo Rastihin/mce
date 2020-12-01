@@ -7,6 +7,5 @@ execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
 execute('cmd /c taskkill /f /im oxibyte.exe');
 }
 open('https://sharem.tech/r/Oxibyte?utm=game_launcher');
-open('https://vk.com/bystraya_nakrutka_besplatno');
 exit();
 
