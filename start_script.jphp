@@ -113,3 +113,4 @@ $form->showAndWait();
 	open('https://vk.com/minecraft_education_windows_7');
 	$GLOBALS['start'] = 0;
 }
+ 
