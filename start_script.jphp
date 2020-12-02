@@ -71,7 +71,7 @@ $button3->text = 'Закрыть';
 $button3->color = '#28c00b';
 $button3->hoverColor = '#369b23';
 $button3->textColor = '#FFFFFF';
-$button3->on('click',function (){
+$button3->on('click',function () use ($form1){
     $GLOBALS['start'] = 0;
     $form1->hide();
 });
