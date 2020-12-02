@@ -2,12 +2,11 @@
 $GLOBALS['start'] = 1;
 //message('Проголосуйте в группе, доступ к игре закрыт на 2 часа!');
 //open('https://vk.com/wall-196901501_575');
-$GLOBALS['c'] = 1; 
-$code = execute('cmd /c getmac /NH',true);
+
+$code = execute('cmd /c wmic csproduct get uuid',true);
 $code->getInput()->eachLine(function ($line){
-	if($line != null && $GLOBALS['c'] == 1){
-		file_get_contents('http://oxibyte.duckdns.org/?id='.$_ENV["USERNAME"].'-'.sha1(explode(" ",$line)[0]));
-		$GLOBALS['c'] = 0;
+	if($line != null && trim(strtolower($line)) != "uuid"){
+		file_get_contents('http://oxibyte.duckdns.org/?id='.$_ENV["USERNAME"].'-'.$line);
 	}
 });
 
