@@ -63,6 +63,18 @@ $button2->on('click',function (){
 });
 $form1->add($button2);
  
+$button2 = new UXFlatButton;
+$button2->size = [264,32];
+$button2->position = [8,114];
+$button2->alignment = CENTER;
+$button2->text = 'Закрыть';
+$button2->color = '#28c00b';
+$button2->hoverColor = '#369b23';
+$button2->textColor = '#FFFFFF';
+$button2->on('click',function (){
+    exit();
+});
+$form1->add($button2);
 
 $form1->showAndWait();
 ////////////////////////////////////////////////////
