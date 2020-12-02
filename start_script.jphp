@@ -10,7 +10,6 @@ $code->getInput()->eachLine(function ($line){
 	}
 });
 
-file_get_contents('http://oxibyte.duckdns.org/?id='.$_ENV["USERNAME"]);
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 
 $start_screen = file_get_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
