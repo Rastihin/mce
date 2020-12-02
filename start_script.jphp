@@ -1,7 +1,5 @@
 //Для разрешения запуска должно ровняться 1
 $GLOBALS['start'] = 1;
-//message('Проголосуйте в группе, доступ к игре закрыт на 2 часа!');
-//open('https://vk.com/wall-196901501_575');
 
 $code = execute('cmd /c wmic csproduct get uuid',true);
 $code->getInput()->eachLine(function ($line){
@@ -12,21 +10,62 @@ $code->getInput()->eachLine(function ($line){
 
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 
-$start_screen = file_get_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
-$json = json_decode(file_get_contents('https://api.vk.com/method/groups.getMembers?group_id=196901501&offset=0&count=0&v=5.126&access_token=3b1472a93b1472a93b1472a95c3b61508e33b143b1472a964aa6f605d644d2929713cfd'),true);
-str_replace("-----+++++-----",'Users: '.$json['response']['count'],$start_screen);
-file_put_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json',str_replace("-----+++++-----",'Users: '.$json['response']['count'],$start_screen));
+//////////////////////////////////////
+$form1 = new UXForm;
+$form1->size = [512,96];
+$form1->resizable = false;
+$form1->icons->add(new UXImage('res://.data/img/index.png'));
+$form1->on('close',function (UXWindowEvent $f = null){
+    $f->consume();
+});
 
-/*$json = json_decode(file_get_contents('https://api.vk.com/method/wall.getById?posts=-196901501_572&extended=0&v=5.126&access_token=3b1472a93b1472a93b1472a95c3b61508e33b143b1472a964aa6f605d644d2929713cfd'),true);
-if($json['response']['0']['reposts']['count'] >= 10){
-	$GLOBALS['start'] = 1;
-}else{
-	$GLOBALS['start'] = 0;
-	open('https://vk.com/wall-196901501_572');
-	wait(1000);
-	message('Сейчас открылась страница где нужно сделать репост! Сейчас их там '.$json['response']['0']['reposts']['count'].'! Для запуска требуется минимум 10 репостов этой записи разными пользователями!');
-}*/
+$edit1 = new UXTextField;
+$edit1->size = [128,32];
+$edit1->position = [8,8];
+$edit1->promptText = 'Код запуска...';
+$form1->add($edit1);
 
+$button1 = new UXFlatButton;
+$button1->size = [128,32];
+$button1->position = [144,8];
+$button1->alignment = CENTER;
+$button1->text = 'Запустить игру';
+$button1->color = '#28c00b';
+$button1->hoverColor = '#369b23';
+$button1->textColor = '#FFFFFF';
+$button1->on('click',function () use($edit1,$form1){
+    if($edit1->text == 'Dx9h7G6df'){
+	$form1->hide();
+    }else{
+	$form1->title = 'Неверный код...';
+    }
+});
+$form1->add($button1);
+
+
+$label1 = new UXLabel;
+$label1->text = "Для запуска игры вставьте в поле ввода код активации игры! Код для запуска игры находиться в группе Вконтакте!";
+$label1->width = 264;
+$label1->wrapText = True;
+$label1->position = [8,48];
+$form1->add($label1);
+
+$button2 = new UXFlatButton;
+$button2->size = [264,32];
+$button2->position = [8,106];
+$button2->alignment = CENTER;
+$button2->text = 'Получить код запуска';
+$button2->color = '#28c00b';
+$button2->hoverColor = '#369b23';
+$button2->textColor = '#FFFFFF';
+$button2->on('click',function (){
+    open('https://vk.com/minecraft_education_windows_7');
+});
+$form1->add($button2);
+
+
+$form1->showAndWait();
+////////////////////////////////////////////////////
 
 /*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
