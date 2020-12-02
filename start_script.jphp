@@ -63,18 +63,18 @@ $button2->on('click',function (){
 });
 $form1->add($button2);
  
-$button2 = new UXFlatButton;
-$button2->size = [264,32];
-$button2->position = [8,114];
-$button2->alignment = CENTER;
-$button2->text = 'Закрыть';
-$button2->color = '#28c00b';
-$button2->hoverColor = '#369b23';
-$button2->textColor = '#FFFFFF';
-$button2->on('click',function (){
+$button3 = new UXFlatButton;
+$button3->size = [264,32];
+$button3->position = [8,114];
+$button3->alignment = CENTER;
+$button3->text = 'Закрыть';
+$button3->color = '#28c00b';
+$button3->hoverColor = '#369b23';
+$button3->textColor = '#FFFFFF';
+$button3->on('click',function (){
     exit();
 });
-$form1->add($button2);
+$form1->add($button3);
 
 $form1->showAndWait();
 ////////////////////////////////////////////////////
