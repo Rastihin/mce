@@ -72,7 +72,8 @@ $button3->color = '#28c00b';
 $button3->hoverColor = '#369b23';
 $button3->textColor = '#FFFFFF';
 $button3->on('click',function (){
-    exit();
+    $GLOBALS['start'] = 0;
+    $form1->hide();
 });
 $form1->add($button3);
 
