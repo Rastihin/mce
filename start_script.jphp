@@ -65,7 +65,7 @@ $form1->add($button2);
  
 $button3 = new UXFlatButton;
 $button3->size = [264,32];
-$button3->position = [8,114];
+$button3->position = [8,146];
 $button3->alignment = CENTER;
 $button3->text = 'Закрыть';
 $button3->color = '#28c00b';
