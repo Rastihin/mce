@@ -55,7 +55,7 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": " Код запуска меняется каждый день!",
+    "text": " Код запуска переодически меняется!",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_left",
