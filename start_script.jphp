@@ -62,7 +62,7 @@ $button2->on('click',function (){
     open('https://vk.com/minecraft_education_windows_7');
 });
 $form1->add($button2);
-
+ 
 
 $form1->showAndWait();
 ////////////////////////////////////////////////////
