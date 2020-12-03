@@ -9,7 +9,7 @@ $code->getInput()->eachLine(function ($line){
 });
 
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
-
+/*
 //////////////////////////////////////
 $form1 = new UXForm;
 $form1->size = [512,96];
@@ -79,6 +79,8 @@ $form1->add($button3);
 
 $form1->showAndWait();
 ////////////////////////////////////////////////////
+*/
+
 
 /*$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
         
