@@ -34,7 +34,7 @@ $button1->color = '#28c00b';
 $button1->hoverColor = '#369b23';
 $button1->textColor = '#FFFFFF';
 $button1->on('click',function () use($edit1,$form1){
-    if(trim($edit1->text) == 'Dx9h7G6df'){
+    if(trim($edit1->text) == 'Hw$4UDsZ'){
 	$form1->hide();
     }else{
 	$form1->title = 'Неверный код...';
