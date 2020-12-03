@@ -68,8 +68,8 @@ $button3->size = [264,32];
 $button3->position = [8,146];
 $button3->alignment = CENTER;
 $button3->text = 'Закрыть';
-$button3->color = '#28c00b';
-$button3->hoverColor = '#369b23';
+$button3->color = '#1F1F1F';
+$button3->hoverColor = '#F00';
 $button3->textColor = '#FFFFFF';
 $button3->on('click',function () use ($form1){
     $GLOBALS['start'] = 0;
