@@ -34,7 +34,7 @@ $button1->color = '#28c00b';
 $button1->hoverColor = '#369b23';
 $button1->textColor = '#FFFFFF';
 $button1->on('click',function () use($edit1,$form1){
-    if(trim($edit1->text) == 'Hw$4UDsZ'){
+    if(trim($edit1->text) == 'fg8FUDsZ'){
 	$form1->hide();
     }else{
 	$form1->title = 'Неверный код...';
@@ -44,7 +44,7 @@ $form1->add($button1);
 
 
 $label1 = new UXLabel;
-$label1->text = "Для запуска игры вставьте в поле ввода код активации игры! Код для запуска игры находиться на стене в группе Вконтакте!";
+$label1->text = "Для запуска игры вставьте в поле ввода код активации игры! Стоимость кода 10 руб/мес!";
 $label1->width = 264;
 $label1->wrapText = True;
 $label1->position = [8,48];
