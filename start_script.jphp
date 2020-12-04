@@ -11,7 +11,7 @@ $GLOBALS['start'] = 1;
 }*/
 
 if(fs::exists('Minecraft.Windows.exe') == false){
-	message("Вам нужно обновить игру!\nНе забудь поделиться записью с друзьями!\nЕсли они у вас есть))");
+	message("Вам нужно обновить игру!)");
 	open('https://vk.com/minecraft_education_windows_7');
 	$GLOBALS['start'] = 0;
 }
