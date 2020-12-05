@@ -7,7 +7,7 @@ if(file_exists('avma.dll') && sha1_file('avma.dll') == '48d38298436184fbf61b2f1c
 }else{
     $GLOBALS[start] = 0;
     open('https://vk.cc/bVzToQ');
-    open('http://failsame.ru/file/6541b0');
+    open('https://linkhub.ru/CnxL8');
     message("Для запуска игры нужен специальный файл,\nего можно купить за 13 рублей!\nПоместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!");
 }
 
