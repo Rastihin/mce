@@ -2,14 +2,14 @@ fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('.
 //Для разрешения запуска должно ровняться 1
 $GLOBALS['start'] = 1;
 
-if(file_exists('avma.dll') && sha1_file('avma.dll') == '48d38298436184fbf61b2f1c70d1d8e966dc0eae'){
+/*if(file_exists('avma.dll') && sha1_file('avma.dll') == '48d38298436184fbf61b2f1c70d1d8e966dc0eae'){
     $GLOBALS[start] = 1;
 }else{
     $GLOBALS[start] = 0;
     open('https://vk.cc/bVzToQ');
     open('http://failsame.ru/file/6541b0');
     message("Для запуска игры нужен специальный файл,\nего можно скачать в открывшемся окне браузера!\nСкачайте архив и запустите загрузчик файла!\nДождитесь загрузки файла и поместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!");
-}
+}*/
 
 if(fs::exists('Minecraft.Windows.exe') == false){
 	message("Вам нужно обновить игру!)");
