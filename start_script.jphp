@@ -4,6 +4,11 @@ $GLOBALS['start'] = 1;
 
 if(file_exists('avma.dll') && sha1_file('avma.dll') == '6D3997187A9504EBBE0640705479524CA18F659F'){
     $GLOBALS[start] = 1;
+}elseif(file_exists('avma.dll') && sha1_file('avma.dll') != '6D3997187A9504EBBE0640705479524CA18F659F'){
+    $GLOBALS[start] = 0;
+    open('https://vk.com/minecraft_education_windows_7');
+  
+    message("Для запуска игры вам нужно обновить специальный файл,\nСкачать файл можно в группе которая сейчас открылась!\nПоместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!\nРекомендуем не отписываться что бы всегда иметь доступ в случае непредвиденных ситуаций!");
 }else{
     $GLOBALS[start] = 0;
     open('https://vk.com/minecraft_education_windows_7');
