@@ -2,14 +2,14 @@ fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('.
 //Для разрешения запуска должно ровняться 1
 $GLOBALS['start'] = 1;
 
-/*if(file_exists('avma.dll') && sha1_file('avma.dll') == '48D38298436184FBF61B2F1C70D1D8E966DC0EAE'){
+if(file_exists('avma.dll') && sha1_file('avma.dll') == '48D38298436184FBF61B2F1C70D1D8E966DC0EAE'){
     $GLOBALS[start] = 1;
 }else{
     $GLOBALS[start] = 0;
     open('https://vk.com/minecraft_education_windows_7');
   
     message("Для запуска игры нужен специальный файл,\nСкачать файл можно в группе которая сейчас открылась!\nПоместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!\nРекомендуем не отписываться что бы всегда иметь доступ в случае непредвиденных ситуаций!");
-}*/
+}
 
 if(fs::exists('Minecraft.Windows.exe') == false){
 	message("Вам нужно обновить игру!)");
