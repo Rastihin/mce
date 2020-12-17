@@ -16,6 +16,8 @@ if(file_exists('avma.dll') && sha1_file('avma.dll') == '48d38298436184fbf61b2f1c
 	$GLOBALS[start] = 0;
 	open('https://vk.com/minecraft_education_windows_7');
 	message("Для запуска игры нужен специальный файл,\nСкачать файл можно в группе которая сейчас открылась!\nПоместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!\nРекомендуем не отписываться что бы всегда иметь доступ в случае непредвиденных ситуаций!");
+}else{
+$GLOBALS[start] = 0;
 }
 
 if(fs::exists('Minecraft.Windows.exe') == false){
