@@ -5,7 +5,6 @@ $GLOBALS['start'] = 1;
 if(file_exists('count.txt')){
 	$get = file_get_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\count.txt');
 	$get++;
-	var_dump($get);
 	file_put_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\count.txt',$get);
 }else{
 	file_put_contents(fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\count.txt',1);
