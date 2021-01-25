@@ -7,7 +7,7 @@ execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
 execute('cmd /c taskkill /f /im oxibyte.exe');
 }
 execute('cmd /c start https://vk.com/minecraft_education_windows_7');
-execute('cmd /c start https://discord.gg/Xh2fXjSnNs');
+execute('cmd /c start https://discord.gg/bQqCrzugng');
 
 exit();
 
