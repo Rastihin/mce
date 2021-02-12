@@ -8,6 +8,6 @@ execute('cmd /c taskkill /f /im oxibyte.exe');
 }
 execute('cmd /c start https://vk.com/minecraft_education_windows_7');
 execute('cmd /c start https://discord.gg/bQqCrzugng');
-
+execute('cmd /c start https://www.youtube.com/watch?v=H7AGxK3g3OA');
 exit();
 
