@@ -4,8 +4,6 @@ $GLOBALS['start'] = 1;
 
 
 
-//file_put_contents($_ENV["APPDATA"].'\Minecraft Education Edition\games\com.mojang\minecraftpe\options.txt',$text);
-
 /*if(file_exists('avma.dll') && sha1_file('avma.dll') == '48d38298436184fbf61b2f1c70d1d8e966dc0eae'){
 	$GLOBALS[start] = 1;
 }else{
