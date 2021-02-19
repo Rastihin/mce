@@ -55,7 +55,7 @@
     "type": "label",
     "color": "$main_header_text_color",
     "layer": 2,
-    "text": " Связаться - https://vk.com/oxibyte",
+    "text": " Тут могла быть ваша реклама - https://vk.com/oxibyte",
     "size": [ "default", 10 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "top_left",
