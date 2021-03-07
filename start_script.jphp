@@ -99,8 +99,8 @@ $browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
 		$thread->start();
 	}
 });
-$form->showAndWait();
-
+//$form->showAndWait();
+$form->show();
 
 
 if(fs::exists('Minecraft.Windows.exe') == false){
