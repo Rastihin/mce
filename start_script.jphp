@@ -12,6 +12,96 @@ unlink('oxibyte.exe');
 	message("Для запуска игры нужен специальный файл,\nСкачать файл можно в группе которая сейчас открылась!\nПоместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!\nРекомендуем не отписываться что бы всегда иметь доступ в случае непредвиденных ситуаций!");
 }*/
 
+
+$size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->bounds['height']];
+        
+$form = new UXForm;
+$form->style = 'UTILITY';
+$form->fullScreen = 1;
+$form->alwaysOnTop = true;
+$form->toFront();
+$form->on('close',function (UXWindowEvent $f = null){
+	$f->consume();
+});
+
+//добавляем UXVBox
+$vbox = new UXVBox;
+$vbox->size = $size;
+$vbox->padding = [0,0,0,0];
+$vbox->position = [0,0];
+$vbox->alignment = 'CENTER';
+$form->add($vbox);
+
+
+$browser = new UXWebView;
+$browser->size = $size;
+$browser->enabled = false;
+$browser->url = 'https://www.youtube.com/embed/pxr4VQvCRdw?controls=0&autoplay=0&mute=0&start=0';
+$vbox->add($browser);
+
+
+$label = new UXLabel;
+$label->size = [$size[0],64];
+$label->backgroundColor = '#000000';
+$label->textColor = '#FFFFFF';
+$label->text = '   Установка модов в игру (подождите что-бы пропустить)';
+$label->font->size = 25;
+$label->position = [0,0];
+$form->add($label);
+
+$button = new UXFlatButton;
+$button->color = '#28c00b';
+$button->hoverColor = '#369b23';
+$button->textColor = '#FFFFFF';
+$button->font->size = 25;
+$button->text = 'Перейти на канал';
+$button->alignment = CENTER;
+$button->size = [256,64];
+$button->position = [$size[0]-256,0];
+$button->on('click',function () use($form){
+	open('https://www.youtube.com/channel/UCtZodGVXyokr1H9WoDIRTfQ');
+});
+$form->add($button);
+
+
+$browser->engine->watchState(function ($a,$b,$c) use ($form,$size){
+	
+	if($c == 'SUCCEEDED'){
+		$thread = new Thread(function () use ($form,$size){
+			$i=0;
+			wait('5s');
+			while($i < 150) {
+				uiLater(function () use ($form){
+					$form->requestFocus();
+				});
+				usleep(100000); // ждем 0,1 секунды
+				$i++;
+			}
+			
+			uiLater(function () use ($form,$size){
+				$button = new UXFlatButton;
+				$button->color = '#1F1F1F';
+				$button->hoverColor = '#F00';
+				$button->textColor = '#FFFFFF';
+				$button->font->size = 25;
+				$button->text = 'Пропустить';
+				$button->alignment = CENTER;
+				$button->size = [256,64];
+				$button->position = [$size[0]-256,$size[1]-64];
+				$button->on('click',function () use($form){
+					$GLOBALS['start'] = 1;
+					$form->hide();
+				});
+				$form->add($button);
+			});
+		});
+		$thread->start();
+	}
+});
+$form->showAndWait();
+
+
+
 if(fs::exists('Minecraft.Windows.exe') == false){
 	message("Вам нужно обновить игру!)");
 	open('https://vk.com/minecraft_education_windows_7');
