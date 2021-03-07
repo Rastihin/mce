@@ -17,9 +17,10 @@ $size = [UXScreen::getScreens()[0]->bounds['width'],UXScreen::getScreens()[0]->b
         
 $form = new UXForm;
 $form->style = 'UTILITY';
-$form->fullScreen = 1;
-$form->alwaysOnTop = true;
-$form->toFront();
+//$form->fullScreen = 1;
+//$form->alwaysOnTop = true;
+//$form->toFront();
+$form->position = [5000,5000]
 $form->on('close',function (UXWindowEvent $f = null){
 	$f->consume();
 });
@@ -36,7 +37,7 @@ $form->add($vbox);
 $browser = new UXWebView;
 $browser->size = $size;
 $browser->enabled = false;
-$browser->url = 'https://www.youtube.com/embed/pxr4VQvCRdw?controls=0&autoplay=1&mute=0&start=0';
+$browser->url = 'https://www.youtube.com/embed/B4ySTsk6OX0?controls=0&autoplay=1&mute=0&start=0';
 $vbox->add($browser);
 
 
