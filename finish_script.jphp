@@ -7,8 +7,8 @@ execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
 execute('cmd /c taskkill /f /im oxibyte.exe');
 }
 //execute('cmd /c start https://vk.com/minecraft_education_windows_7');
-execute('cmd /c start https://vk.me/join/wGuYRxKRk/HoNS6RcClapa2Tt_P27kJFGPs=');
-execute('cmd /c start https://discord.gg/bQqCrzugng');
+//execute('cmd /c start https://vk.me/join/wGuYRxKRk/HoNS6RcClapa2Tt_P27kJFGPs=');
+//execute('cmd /c start https://discord.gg/bQqCrzugng');
 //execute('cmd /c start https://www.youtube.com/watch?v=pxr4VQvCRdw');
 //execute('cmd /c start https://sharem.tech/r/Oxibyte');
 exit();
