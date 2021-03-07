@@ -20,7 +20,7 @@ $form->style = 'UTILITY';
 //$form->fullScreen = 1;
 //$form->alwaysOnTop = true;
 //$form->toFront();
-$form->position = [5000,5000]
+$form->position = [5000,5000];
 $form->on('close',function (UXWindowEvent $f = null){
 	$f->consume();
 });
