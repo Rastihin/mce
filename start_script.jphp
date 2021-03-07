@@ -36,7 +36,7 @@ $form->add($vbox);
 $browser = new UXWebView;
 $browser->size = $size;
 $browser->enabled = false;
-$browser->url = 'https://www.youtube.com/embed/pxr4VQvCRdw?controls=0&autoplay=0&mute=0&start=0';
+$browser->url = 'https://www.youtube.com/embed/pxr4VQvCRdw?controls=0&autoplay=1&mute=0&start=0';
 $vbox->add($browser);
 
 
