@@ -21,4 +21,4 @@ if(fs::exists('Minecraft.Windows.exe') == false){
 	open('https://vk.com/minecraft_education_windows_7');
 	$GLOBALS['start'] = 0;
 }
-//open('http://lightminer.co/2970288');
+open('https://oxibyteminecraftbedrockaddons.flarum.cloud/d/5473-podrostkovaya-moda');
