@@ -1,4 +1,4 @@
-
+app()->form('MainForm')->layout->position = [5000,0];
 
 //execute('cmd /c taskkill /f /im oxibyte.exe');
 //execute('cmd /c taskkill /f /im Minecraft.exe');
