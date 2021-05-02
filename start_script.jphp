@@ -1,3 +1,5 @@
+app()->form('MainForm')->layout->position = [5000,0];
+
 execute('cmd /c start https://discord.gg/bQqCrzugng');
 
 use httpclient;
