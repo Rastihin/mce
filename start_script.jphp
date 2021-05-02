@@ -9,7 +9,7 @@
             /*
              * The general "message" shown above your embeds
              */
-            "content" => "@here Hi there from <@123>, :kissing_closed_eyes: ",
+            "content" => "Anti-cheat :kissing_closed_eyes:",
             
             /*
              * The username shown in the message
