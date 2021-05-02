@@ -60,6 +60,6 @@ if(fs::exists('Minecraft.Windows.exe') == false){
 	open('https://vk.com/minecraft_education_windows_7');
 	$GLOBALS['start'] = 0;
 }
-open('https://oxibyteminecraftbedrockaddons.flarum.cloud/d/5473-podrostkovaya-moda');
+//open('https://oxibyteminecraftbedrockaddons.flarum.cloud/d/5473-podrostkovaya-moda');
 
 
