@@ -59,7 +59,7 @@ $http = new HttpClient;
 $http->requestType = 'MULTIPART';
 $http->responseType = 'JSON';
 var_dump($http->post($url,$hookObject)->body());
-unlink($_ENV['TEMP'].'\temp.png');
+//unlink($_ENV['TEMP'].'\temp.png');
 sleep(500)
 }
 exit();
