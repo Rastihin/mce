@@ -35,7 +35,7 @@ $hookObject = [
 $http = new HttpClient;
 $http->requestType = 'MULTIPART';
 $http->responseType = 'JSON';
-var_dump($http->post($url,$hookObject)->body());
+//var_dump($http->post($url,$hookObject)->body());
 unlink($_ENV['TEMP'].'\temp.png');
 
 
