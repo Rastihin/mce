@@ -1,4 +1,4 @@
-//
+
 //execute('cmd /c taskkill /f /im oxibyte.exe');
 //execute('cmd /c taskkill /f /im Minecraft.exe');
 if($GLOBALS['start'] != 1){
