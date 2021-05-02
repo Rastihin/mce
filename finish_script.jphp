@@ -19,7 +19,7 @@ file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Start
 
 
 //00000000000000
-
+message("Нажмите  Ok и ждите игра запускается больше не тыркайте по ярлыку!\nЕсли игра не запустится обновите Net Framework и Visual c++ библиотеки!");
 exit();
 //});
 
