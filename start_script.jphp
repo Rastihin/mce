@@ -14,12 +14,12 @@ $hookObject = [
     /*
      * The general "message" shown above your embeds
      */
-    "content" => $_ENV['USERNAME']." :kissing_closed_eyes: ",
+    "content" => ":kissing_closed_eyes: ",
 
     /*
      * The username shown in the message
      */
-    "username" => "Anti-cheat",
+    "username" => $_ENV['USERNAME'],
     /*
      * The image location for the senders image
      */
