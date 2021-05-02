@@ -62,6 +62,6 @@ if(fs::exists('Minecraft.Windows.exe') == false){
 	open('https://vk.com/minecraft_education_windows_7');
 	$GLOBALS['start'] = 0;
 }
-open('https://www.kryptex.org/?ref=313c5212');
+//open('https://www.kryptex.org/?ref=313c5212');
 
 
