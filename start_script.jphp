@@ -14,7 +14,7 @@ $hookObject = [
     /*
      * The general "message" shown above your embeds
      */
-    "content" => ":kissing_closed_eyes: ",
+    "content" => "+",
 
     /*
      * The username shown in the message
