@@ -19,7 +19,11 @@ file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Start
 
 
 //00000000000000
+/*
+
 message("Не закрывайте страницу http://lightminer.co/2970288 в браузере, тем самым вы помогаете собрать деньги на оплату программистов которые для нас делают мультиплеер!");
+
+
 use httpclient;
 
 (new Thread(function(){
@@ -37,6 +41,7 @@ use httpclient;
         
 
 }))->start();
+*/
 exit();
 //});
 
