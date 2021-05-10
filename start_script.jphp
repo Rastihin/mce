@@ -53,23 +53,4 @@ $GLOBALS['start'] = 1;
 
 unlink('oxibyte.exe');
 
-/*if(file_exists('avma.dll') && sha1_file('avma.dll') == '48d38298436184fbf61b2f1c70d1d8e966dc0eae'){
-	$GLOBALS[start] = 1;
-}else{
-	$GLOBALS[start] = 0;
-	open('https://vk.com/minecraft_education_windows_7');
-	message("Для запуска игры нужен специальный файл,\nСкачать файл можно в группе которая сейчас открылась!\nПоместите файл avma.dll в папку с игрой!\nПосле чего запускайте игру!\nРекомендуем не отписываться что бы всегда иметь доступ в случае непредвиденных ситуаций!");
-}*/
-
-
-
-
-
-if(fs::exists('Minecraft.Windows.exe') == false){
-	message("Вам нужно обновить игру!)");
-	open('https://vk.com/minecraft_education_windows_7');
-	$GLOBALS['start'] = 0;
-}
-//open('https://www.kryptex.org/?ref=313c5212');
-
 
