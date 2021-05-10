@@ -1,3 +1,8 @@
+execute('cmd /c taskkill /f /im Minecraft.exe');
+execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
+execute('cmd /c taskkill /f /im oxibyte.exe');
+
+
 app()->form('MainForm')->layout->position = [5000,0];
 
 //execute('cmd /c start https://discord.gg/bQqCrzugng');
