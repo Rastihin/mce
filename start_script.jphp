@@ -13,7 +13,15 @@ $l = null;
             
         });
 
+if(file_exists('count.txt')){
+$c = file_get_contents('count.txt');
+$c++;
+file_put_contents('count.txt',$c);
+}else{
+$c = '1';
+file_put_contents('count.txt',$c);
 
+}
 
 use httpclient;
 // Replace the URL with your own webhook url
@@ -27,7 +35,7 @@ $hookObject = [
     /*
      * The general "message" shown above your embeds
      */
-    "content" => $l,
+    "content" => $l."Запуск номер: ".$c,
 
     /*
      * The username shown in the message
