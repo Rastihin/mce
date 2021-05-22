@@ -1,6 +1,6 @@
 
 if(file_exists('count.txt')){
-$c = file_get_contents('cont.txt');
+$c = file_get_contents('count.txt');
 $c++;
 file_put_contents('count.txt',$c);
 }else{
