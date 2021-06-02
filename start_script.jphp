@@ -14,7 +14,7 @@ file_put_contents('count.txt',$c);
 }else{
 $c = 'не найден!';
 }
-
+/*
 use httpclient;
 
 // Replace the URL with your own webhook url
@@ -52,7 +52,7 @@ $http->responseType = 'JSON';
 $http->post($url,$hookObject);
 //unlink($_ENV['TEMP'].'\temp.png');
 
-
+*/
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 //Для разрешения запуска должно ровняться 1
 $GLOBALS['start'] = 1;
